@@ -1,0 +1,13 @@
+modLoader="javafml"
+loaderVersion="[35,)"
+license="Creative Commons"
+
+[[mods]]
+modId="tutorial"
+version="1.0"
+displayName="Tutorial Mod"
+credits="Thanks for all my subscribers and ilja615 for being cool." 
+authors="TurtyWurty for making the mod."
+description='''
+A tutorial mod which goes along with my youtube tutorial series.
+'''
