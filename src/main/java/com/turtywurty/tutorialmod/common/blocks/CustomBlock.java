@@ -44,6 +44,6 @@ public class CustomBlock extends BaseHorizontalBlock {
 
 	@Override
 	public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) {
-		return SHAPES.get(state.get(HORIZONTAL_FACING));
+		return SHAPES.get(this).get(state.get(HORIZONTAL_FACING));
 	}
 }

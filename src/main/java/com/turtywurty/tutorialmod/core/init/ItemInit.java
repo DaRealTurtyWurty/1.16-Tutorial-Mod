@@ -31,6 +31,13 @@ public class ItemInit {
 			() -> new BlockItem(BlockInit.EXAMPLE_BLOCK.get(),
 					new Item.Properties().group(TutorialMod.TUTORIAL_GROUP)));
 
+	public static final RegistryObject<BlockItem> EXAMPLE_ORE = ITEMS.register("example_ore",
+			() -> new BlockItem(BlockInit.EXAMPLE_ORE.get(), new Item.Properties().group(TutorialMod.TUTORIAL_GROUP)));
+
 	public static final RegistryObject<BlockItem> CUSTOM_BLOCK = ITEMS.register("custom_block",
 			() -> new BlockItem(BlockInit.CUSTOM_BLOCK.get(), new Item.Properties().group(TutorialMod.TUTORIAL_GROUP)));
+
+	public static final RegistryObject<BlockItem> CUSTOM_BLOCK2 = ITEMS.register("custom_block2",
+			() -> new BlockItem(BlockInit.CUSTOM_BLOCK2.get(),
+					new Item.Properties().group(TutorialMod.TUTORIAL_GROUP)));
 }

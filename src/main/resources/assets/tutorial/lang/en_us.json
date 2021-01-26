@@ -4,6 +4,7 @@
 	"block.tutorial.example_block": "Block of Example",
 	"tooltip.special_item.hold_shift": "\u00A77Hold \u00A7eShift \u00A77for More Information",
 	"block.tutorial.custom_block": "Custom Block",
+	"block.tutorial.custom_block2": "Custom Block 2",
 	"itemGroup.tutorialtab": "Tutorial Items",
 	"item.tutorial.example_food": "Cherry",
 	"block.tutorial.example_ore": "Example Ore"
