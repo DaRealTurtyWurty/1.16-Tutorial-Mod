@@ -19,7 +19,7 @@ import net.minecraft.world.IWorld;
 
 public class BaseHorizontalBlock extends Block {
 
-	protected static final Map<Direction, VoxelShape> SHAPES = new HashMap<Direction, VoxelShape>();
+	protected static final Map<Block, Map<Direction, VoxelShape>> SHAPES = new HashMap<Block, Map<Direction, VoxelShape>>();
 	public static final DirectionProperty HORIZONTAL_FACING = BlockStateProperties.HORIZONTAL_FACING;
 
 	public BaseHorizontalBlock(Properties properties) {
@@ -32,8 +32,6 @@ public class BaseHorizontalBlock extends Block {
 	public BlockState mirror(BlockState state, Mirror mirrorIn) {
 		return state.rotate(mirrorIn.toRotation(state.get(HORIZONTAL_FACING)));
 	}
-	
-	
 
 	@Override
 	public BlockState rotate(BlockState state, IWorld world, BlockPos pos, Rotation direction) {
@@ -51,7 +49,7 @@ public class BaseHorizontalBlock extends Block {
 		builder.add(HORIZONTAL_FACING);
 	}
 	
-	protected static void calculateShapes(Direction to, VoxelShape shape) {
+	protected static VoxelShape calculateShapes(Direction to, VoxelShape shape) {
 		VoxelShape[] buffer = new VoxelShape[] { shape, VoxelShapes.empty() };
 
 		int times = (to.getHorizontalIndex() - Direction.NORTH.getHorizontalIndex() + 4) % 4;
@@ -62,12 +60,14 @@ public class BaseHorizontalBlock extends Block {
 			buffer[1] = VoxelShapes.empty();
 		}
 
-		SHAPES.put(to, buffer[0]);
+		return buffer[0];
 	}
 
 	protected void runCalculation(VoxelShape shape) {
+		SHAPES.put(this, new HashMap<Direction, VoxelShape>();
+		Map<Direction, VoxelShape> facingMap = SHAPES.get(this);
 		for (Direction direction : Direction.values()) {
-			calculateShapes(direction, shape);
+			facingMap.put(direction, calculateShapes(direction, shape));
 		}
 	}
 }
