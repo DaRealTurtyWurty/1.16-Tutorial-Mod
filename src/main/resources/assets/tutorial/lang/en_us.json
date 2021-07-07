@@ -7,5 +7,10 @@
 	"block.tutorial.custom_block2": "Custom Block 2",
 	"itemGroup.tutorialtab": "Tutorial Items",
 	"item.tutorial.example_food": "Cherry",
-	"block.tutorial.example_ore": "Example Ore"
+	"block.tutorial.example_ore": "Example Ore",
+	"item.tutorial.example_sword": "Example Sword",
+	"item.tutorial.example_pickaxe": "Example Pickaxe",
+	"item.tutorial.example_shovel": "Example Shovel",
+	"item.tutorial.example_axe": "Example Axe",
+	"item.tutorial.example_hoe": "Example Hoe"
 }
